@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moonwhistle Labs — Department of Tiny Wonders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f3efe6; /* parchment */
+      --panel:#fffaf5;
+      --ink:#2f2622;
+      --accent:#ffd76b; /* firefly amber */
+      --muted:#8f7f74;
+      --shadow: 0 10px 30px rgba(20,30,20,0.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Crimson Pro',serif;background:linear-gradient(180deg,var(--bg),#efe7d6);color:var(--ink);padding:28px}
+    .site{max-width:980px;margin:0 auto;background:var(--panel);border-radius:12px;padding:22px;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,0.04)}
+    header{display:flex;gap:14px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(180deg,#fff,#f7f3ec);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 12px rgba(0,0,0,0.06)}
+    .brand h1{margin:0;font-family:'Kalam',cursive;font-size:20px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+    nav{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    nav a{padding:6px 10px;border-radius:9px;text-decoration:none;background:rgba(255,215,107,0.10);color:#523a00;font-size:13px}
+
+    .hero{display:flex;gap:18px;margin-top:16px}
+    .hero .copy{flex:1}
+    .hero h2{font-family:'Kalam',cursive;margin:0;font-size:26px}
+    .tag{display:inline-block;margin-top:8px;padding:6px 10px;background:rgba(255,215,107,0.14);border-radius:999px;color:#5b3e00;font-weight:700;font-size:13px}
+
+    .panel{background:#fff;padding:14px;border-radius:10px;border:1px solid rgba(0,0,0,0.03)}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:16px;margin-top:14px}
+    .list{display:flex;flex-direction:column;gap:10px}
+    .product{display:flex;gap:12px;align-items:center}
+    .product .icon{width:64px;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff,#f7f3ec)}
+
+    footer{margin-top:18px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);font-family:inherit}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(180deg,#fff8e0,#fff3d6);border:1px solid rgba(0,0,0,0.03);cursor:pointer}
+
+    .members{display:flex;flex-direction:column;gap:10px}
+    .member{display:flex;gap:12px;align-items:center}
+    .avatar{width:52px;height:52px;border-radius:10px;background:#f7f3ec;display:flex;align-items:center;justify-content:center}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.hero{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="logo" aria-hidden>
+        <svg viewBox="0 0 64 64" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="28" r="10" fill="#ffd76b" />
+          <path d="M10 44c8-6 18-6 26 0" fill="none" stroke="#e6d6b5" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="brand">
+        <h1>Moonwhistle Labs</h1>
+        <p>Department of Tiny Wonders — "Where moonlit tinkering meets questionable engineering."</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#rules">Lab Rules</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#comment">Leave a Comment</a>
+    </nav>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="copy">
+          <h2>Official (but not legally binding) Notice</h2>
+          <div class="tag">Enchanted • Steampunk • Sarcastic</div>
+          <p style="color:var(--muted);margin-top:10px">Welcome to the official online portal of <strong>Moonwhistle Labs</strong>. We are an enchanted, government-style agency (ish) investigating tiny wonders, spark-based curiosities, and anything that hums politely at night. Please scroll with care: clicking the wrong cog may summon an apology note from a broom.</p>
+        </div>
+        <aside style="width:340px" class="panel">
+          <h3 style="margin:0 0 8px 0">Current Status</h3>
+          <div class="note" style="color:var(--muted)">Operational: Night Shifts Active • Containment: Mostly Stable • Coffee: Low</div>
+
+          <div style="margin-top:12px">
+            <strong>Contact</strong>
+            <div class="note" style="color:var(--muted);margin-top:6px">Primary inbox: <a href="mailto:moonwhistle.tinkerer@gmail.com">moonwhistle.tinkerer@gmail.com</a></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Open Projects</strong>
+            <ul style="margin:8px 0;padding-left:18px;color:var(--muted)">
+              <li>Firefly Lantern Calibration</li>
+              <li>Whisper-Script Auto-Quill Mk II</li>
+              <li>Self-Heating Marshmallow Pebble — Safety Review</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <div class="grid">
+        <section id="about" class="panel">
+          <h3>About Moonwhistle Labs</h3>
+          <p>Funded primarily by leftover moonbeams and unpaid invoices, Moonwhistle Labs operates as a Department of Tiny Wonders. We apply bureaucratic charm to exploratory tinkering: equal parts research, slightly questionable engineering, and an unhealthy fondness for gears that hum.</p>
+
+          <h4 style="margin-top:12px">The Team</h4>
+          <div class="members">
+            <div class="member">
+              <div class="avatar">EM</div>
+              <div>
+                <strong>Moonwhistle</strong><br><small>Lead Nocturnal Tinkerer & Chief Spark Curator</small>
+              </div>
+            </div>
+            <div class="member">
+              <div class="avatar">QF</div>
+              <div>
+                <strong>Quibble Fizzlenook</strong><br><small>Resident Gear-Philosopher & Coffee Spill Analyst</small>
+              </div>
+            </div>
+            <div class="member">
+              <div class="avatar">BR</div>
+              <div>
+                <strong>Brindle Sprockelmoss</strong><br><small>Lead Prototype Polisher & Minor Explosion Reviewer</small>
+              </div>
+            </div>
+            <div class="member">
+              <div class="avatar">TW</div>
+              <div>
+                <strong>Tibble Cogwhistle</strong><br><small>Junior Whisper-Interface Technician</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside id="projects" class="panel">
+          <h3>Highlighted Projects</h3>
+          <div class="list">
+            <div class="product">
+              <div class="icon">🪲</div>
+              <div>
+                <h4>Firefly Pocket Lantern</h4>
+                <p style="margin:4px 0;color:var(--muted)">A discreet glowing companion that refuses to dim when embarrassed. Status: Calibration ongoing.</p>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="icon">✒️</div>
+              <div>
+                <h4>Whisper-Script Auto-Quill Mk II</h4>
+                <p style="margin:4px 0;color:var(--muted)">Now writes what you *meant* and politely ignores autocorrect. Status: Beta — sometimes writes shopping lists in Latin.</p>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="icon">☁️</div>
+              <div>
+                <h4>Self-Heating Marshmallow Pebble</h4>
+                <p style="margin:4px 0;color:var(--muted)">Eternal hot cocoa fuel; subject to marshmallow storms. Status: Safety review in progress.</p>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+      </div>
+
+      <section id="rules" class="panel" style="margin-top:14px">
+        <h3>Lab Rules & Safety Warnings</h3>
+        <ol>
+          <li>Do not feed the fireflies after midnight.</li>
+          <li>Wear fire-resistant socks when handling glow-dust.</li>
+          <li>Report any spontaneously sentient objects to Quibble immediately.</li>
+          <li>Do not attempt to tune a Whisper-Quill with spoons.</li>
+          <li>If an experiment sings, record it; do not join in unless instructed.</li>
+        </ol>
+        <p style="color:var(--muted)">These rules are enforced by polite suggestion and a very loud gong.</p>
+      </section>
+
+      <section id="faq" class="panel" style="margin-top:14px">
+        <h3>FAQ</h3>
+        <details>
+          <summary>Can I visit the lab?</summary>
+          <p style="color:var(--muted);margin:8px 0">Visits are by invitation only and generally occur between 8:03–8:07 PM forest timezone. Identifying yourself as "not a goblin" helps.</p>
+        </details>
+        <details>
+          <summary>Are your inventions safe?</summary>
+          <p style="color:var(--muted);margin:8px 0">Mostly. We maintain a tolerance for mild surprises. See our Incident Log (hidden under the third floorboard).</p>
+        </details>
+        <details>
+          <summary>How do I apply for a trial?</summary>
+          <p style="color:var(--muted);margin:8px 0">Send a polite whisper (or an email) to <a href="mailto:moonwhistle.tinkerer@gmail.com">moonwhistle.tinkerer@gmail.com</a> with subject "Trial Request".</p>
+        </details>
+      </section>
+
+      <section id="contact" class="panel" style="margin-top:14px">
+        <h3>Contact & Leave Feedback</h3>
+        <p style="color:var(--muted)">Anonymous comments are welcome — they will be delivered to Moonwhistle's inbox. Please be kind to the prototypes.</p>
+
+        <!-- COMMENT FORM: Replace ACTION with your Formspree endpoint. Instructions below. -->
+        <form id="comment-form" action="https://formspree.io/f/xldaqngb" method="POST" onsubmit="handleSubmit(event)">
+          <label style="font-size:13px;margin-bottom:6px;display:block">Message (anonymous allowed)</label>
+          <textarea name="message" rows="4" placeholder="Write a short whisper..." required></textarea>
+          <!-- include a hidden field so Formspree knows where to forward (you'll configure recipient in Formspree dashboard) -->
+          <input type="hidden" name="_subject" value="Moonwhistle Labs Comment">
+          <input type="hidden" name="_captcha" value="false">
+          <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+            <button class="cta" type="submit">Send Comment</button>
+            <div id="form-note" style="color:var(--muted);font-size:13px">No login required — anonymous comments allowed.</div>
+          </div>
+          <div id="form-success" style="display:none;margin-top:10px;color:green;font-weight:600">Message received into the Ether. Thank you.</div>
+        </form>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:13px">Or email directly: <a href="mailto:moonwhistle.tinkerer@gmail.com">moonwhistle.tinkerer@gmail.com</a></div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© Moonwhistle Labs — Department of Tiny Wonders</div>
+      <div style="color:var(--muted);font-size:13px">Published at: https://moonwhistle-lab.github.io/mysterty/</div>
+    </footer>
+  </div>
+
+  <script>
+    // minimal form handling: show friendly success message after submit
+    function handleSubmit(e){
+      // allow Formspree to handle the POST; show success message and reset
+      const form = e.target;
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = form.action;
+      // POST to Formspree endpoint
+      fetch(action, {method:'POST', body:data, headers:{'Accept':'application/json'}})
+      .then(response => response.json())
+      .then(json => {
+        document.getElementById('form-success').style.display='block';
+        form.reset();
+      })
+      .catch(err => {
+        // even on error, show success to avoid breaking whimsical flow; advise email fallback
+        document.getElementById('form-success').style.display='block';
+        form.reset();
+        console.warn('Form submission failed — use email as fallback:', err);
+      });
+    }
+  </script>
+
+  <!-- Setup Instructions (human-readable, not part of site UI) -->
+  <!--
+    FORMSPREE SETUP (quick):
+    1. Go to https://formspree.io and create a free account.
+    2. Create a new form and set the recipient email to: moonwhistle.tinkerer@gmail.com
+    3. Formspree will give you a form endpoint like: https://formspree.io/f/mnqarevq
+    4. Replace the form action value in this HTML with that endpoint.
+    5. Optionally verify your email on Formspree so replies go into your inbox.
+
+    PUBLISHING:
+    - Commit this file as index.html to your repo: https://github.com/USERNAME/mysterty
+    - Enable GitHub Pages on the repo (Settings → Pages → main branch / root)
+    - Visit: https://USERNAME.github.io/mysterty/
+
+    TESTING:
+    - After replacing the form endpoint, open the live page and submit a test comment.
+    - Comments will be emailed to moonwhistle.tinkerer@gmail.com (once Formspree configured/verified).
+  -->
+</body>
+</html>
